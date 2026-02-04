@@ -53,3 +53,4 @@ if __name__ == '__main__':
     main()
 
 play_one_round()
+# let the user guess 3 times before failing
