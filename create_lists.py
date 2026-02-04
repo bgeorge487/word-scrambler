@@ -1,4 +1,3 @@
-# removing my API key before submission, please go here to get one (it's free): https://rapidapi.com/sheharyar566/api/random-words5/playground/apiendpoint_221b25b9-43f8-4876-82f8-0b46201f7eea
 import requests
 def initialize_list():
     url = "https://random-words5.p.rapidapi.com/getMultipleRandom"
