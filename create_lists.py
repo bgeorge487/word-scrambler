@@ -3,7 +3,7 @@ def initialize_list():
     url = "https://random-words5.p.rapidapi.com/getMultipleRandom"
     querystring = {"count":"10"}
     headers = {
-        "x-rapidapi-key": "1b39116a32mshf5af84e362ab288p12e1c0jsn1c7ac1a93932",
+        "x-rapidapi-key": f'API_KEY',
         "x-rapidapi-host": "random-words5.p.rapidapi.com"
     }
     response = requests.get(url, headers=headers, params=querystring)
