@@ -1,0 +1,31 @@
+{
+    "chat.agent.enabled": false,
+    "chat.agent.codeBlockProgress": false,
+    "chat.checkpoints.enabled": false,
+    "chat.commandCenter.enabled": false,
+    "chat.extensionTools.enabled": false,
+    "chat.exitAfterDelegation": false,
+    "chat.extensionUnification.enabled": false,
+    "chat.implicitContext.enabled": {
+        "panel": "never"
+    },
+    "chat.implicitContext.suggestedContext": false,
+    "chat.instructionsFilesLocations": {
+        ".github/instructions": false
+    },
+    "chat.mcp.access": "none",
+    "chat.math.enabled": false,
+    "chat.sendElementsToChat.attachImages": false,
+    "chat.sendElementsToChat.attachCSS": false,
+    "chat.sendElementsToChat.enabled": false,
+    "chat.suspendThrottling": true,
+    "chat.tools.edits.autoApprove": {
+        "**/*": false
+    },
+    "chat.tools.terminal.enableAutoApprove": false,
+    "chat.tools.todos.showWidget": false,
+    "chat.viewSessions.enabled": false,
+    "chat.viewTitle.enabled": false,
+    "chat.viewWelcome.enabled": false,
+    "inlineChat.holdToSpeech": false
+}
