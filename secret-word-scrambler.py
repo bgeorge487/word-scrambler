@@ -34,35 +34,39 @@ def play_one_round():
     # I'm cheating to test it
     print(selected_word)
     jumble_word = scramble_word(selected_word)
-    # printing the selected word for testing :)
-    print(selected_word)
-    player_input = input(f'Guess the word: {jumble_word}')
+    print(f'Guess the word! {jumble_word}')
     player_guess = 3
     while player_guess > 0:
-        if player_input == selected_word:
-            print("Congrats! you guessed correctly!")
-            break
-        elif player_guess > 0 and player_input != selected_word:
-            print(f'Try again! You have {player_guess} tries left')
+        player_input = input(f'Your guess: ')
+        if player_input != selected_word:            
             player_guess -= 1
-        else:
-            print(f'Better luck next time! The word was {selected_word}')
+            if player_guess == 0:
+                print(f'Better luck next time! The word was {selected_word}')
+                break           
+            print(f'Try again! You have {player_guess} tries left')            
+        elif player_input == selected_word:
+            print("Congrats! you guessed correctly!")
+            break 
+
 # after each round ask if the player wants to go again
 def ask_to_play_again():
     play_again = input('Do you want to play again? (Y/N): ')
     if play_again.lower() == 'y':
         return True
-    elif play_again.lower() == 'n':
+    else:    
         return False
-    else:
-        raise ValueError("Invalid input. Please enter 'Y' or 'N'.")
-        ask_to_play_again()
+    
+        
 
 if __name__ == '__main__':
-    
-
-    while True:
-        play_one_round()
-        if not ask_to_play_again():
-            break
+    print("Welcome to the Word Scrambler!\n")
+    play_one_round()
+    replay = ask_to_play_again()
+    while not replay:
+        if replay == False:                    
             print("Thanks for playing!")
+            exit
+        else:
+            play_one_round()
+            
+            
