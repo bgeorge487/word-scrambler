@@ -42,16 +42,16 @@ def play_one_round():
             player_guess -= 1
             if player_guess == 0:
                 print(f'Better luck next time! The word was {selected_word}')
-                break           
+                return           
             print(f'Try again! You have {player_guess} tries left')            
         elif player_input == selected_word:
             print("Congrats! you guessed correctly!")
-            break 
+            return 
 
 # after each round ask if the player wants to go again
 def ask_to_play_again():
-    play_again = input('Do you want to play again? (Y/N): ')
-    if play_again.lower() == 'y':
+    play_again = input('Do you want to play again? (Y/N): ').lower()    
+    if play_again == 'y':
         return True
     else:    
         return False
@@ -60,13 +60,15 @@ def ask_to_play_again():
 
 if __name__ == '__main__':
     print("Welcome to the Word Scrambler!\n")
-    play_one_round()
-    replay = ask_to_play_again()
-    while not replay:
-        if replay == False:                    
+    replay = True
+    while replay == True:        
+        play_one_round()
+        replay = ask_to_play_again()
+        if replay == True:                    
+            play_one_round
+            continue
+        else:
             print("Thanks for playing!")
             exit
-        else:
-            play_one_round()
             
             
